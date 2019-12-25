@@ -19,8 +19,11 @@ WORKDIR /app
 # RUN pip3 install flask
 RUN pip3 install -r requirements.txt
 
+# Exposing port 5000 for the API (default Flask port)
+EXPOSE 5000
+
 # Setting the entrypoint
-ENTRYPOINT ['python3']
+ENTRYPOINT ["python3"]
 
 # Running our app.py api script inside our contrainer
-CMD ['app.py']
+CMD ["app.py"]
